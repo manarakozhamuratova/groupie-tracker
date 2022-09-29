@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #9d98ae;
+    color: #fff;
+    font-family: 'Cairo Play', sans-serif;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.div-center {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artist-link {
+    margin: 0 25px 15px 0;
+}
+
+.artist-link a img {
+    border-radius: 5px;
+}
