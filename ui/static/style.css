@@ -6,6 +6,13 @@
 
 body {
     background-color: #9d98ae;
+    background-image: url(/ui/img/haha.jpg);
+    background-position: center center;
+background-attachment: fixed;
+-o-background-size: 100% 100%, auto;
+-moz-background-size: 100% 100%, auto;
+-webkit-background-size: 100% 100%, auto;
+background-size: 100% 100%, auto;
     color: #fff;
     font-family: 'Cairo Play', sans-serif;
 }
