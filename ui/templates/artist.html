@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../ui/static/artists.css" />
+    <title>Artists</title>
+  </head>
+  <body>
+    <form method="get" action="/artists/" class="form">
+      <div><img class="Image" src="{{.Image}}" /></div>
+      <div class="container">
+        <p class="Name"><h3>Name:</h3>{{ .Name}}</p>
+        <div class="Members">   
+        <h3>Members:</h3>
+        {{range .Members}}
+        <p>{{.}}</p>
+        {{end}}
+        </div>
+      <div class="Info">
+      <div><h3>CreationDate:</h3>{{.CreationDate}}</div>
+      <div><h3>FirstAlbum:</h3>{{.FirstAlbum}}</div>
+      <div><h3>Concerts:</h3></div>
+        {{range $city, $dates := .DatesLocations}}
+        <div class = "cities" id="placemark"><p>{{$city}}</div>
+          {{range $dates}}
+        <ul>
+          <li>{{.}}</li>
+        </ul> 
+        {{end}}
+        {{end}}
+        </div>
+        <div class="geo" id ="map"></div>
+        </div>
+      <div class="button">
+        <a href="/">Go back home</a>
+      </div>
+    </div>
+    </form>
+  </body>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=c47abfaf-9eb2-4356-8ebc-780279c04196&lang=ru_RU" type="text/javascript"></script>
+  <script src= "../../ui/script/map.js" type="text/javascript"></script>
+</html>
