@@ -21,5 +21,5 @@ func NewHandler() *Handler {
 func (h *Handler) InitRoutes(mux *http.ServeMux) {
 	mux.HandleFunc("/", h.homePage)
 	mux.HandleFunc("/artists/", h.artistPage)
-	mux.Handle("/ui/static/", http.StripPrefix("/ui/static/", http.FileServer(http.Dir("./ui/static/"))))
+	mux.Handle("/ui/", http.StripPrefix("/ui/", http.FileServer(http.Dir("./ui/"))))
 }
